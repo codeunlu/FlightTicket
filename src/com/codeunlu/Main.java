@@ -21,6 +21,8 @@ public class Main {
         // Uçuş Oluşturuldu
         Flight flight = new Flight();
         flight.setId(1);
+        flight.setFlightChairCount(15);
+        flight.setFlightChairBusinessCount(5);
         flight.setCompany(Company.PEGASUS);
         flight.setFlightTimeStart(new Date(2021,7,16));
         flight.setFlightTimeEnd(new Date(2021,7,16));
@@ -31,9 +33,9 @@ public class Main {
         flightPlane.setFlightId(1);
         Map<Integer,Boolean> flightMap = new HashMap<>();
         Map<Integer, ChairType> flightChairTypeMap = new HashMap<>();
-        for (Integer i = 1; i<=10; i++){
+        for (Integer i = 1; i<=flight.getFlightChairCount(); i++){
             flightMap.put(i,true);
-            if(i <= 3){
+            if(i <= flight.getFlightChairBusinessCount()){
                 flightChairTypeMap.put(i,ChairType.BUSINESS);
             }else{
                 flightChairTypeMap.put(i,ChairType.ECONOMY);

@@ -7,14 +7,17 @@ public class Flight {
     private Company company;
     private Date flightTimeStart;
     private Date flightTimeEnd;
+    private Integer flightChairCount;
+    private Integer flightChairBusinessCount;
 
     public Flight(){}
 
-    public Flight(Integer id, Company company, Date flightTimeStart, Date flightTimeEnd) {
+    public Flight(Integer id, Company company, Date flightTimeStart, Date flightTimeEnd,Integer flightChairCount) {
         this.id = id;
         this.company = company;
         this.flightTimeStart = flightTimeStart;
         this.flightTimeEnd = flightTimeEnd;
+        this.flightChairCount = flightChairCount;
     }
 
     public Integer getId() {
@@ -47,5 +50,21 @@ public class Flight {
 
     public void setFlightTimeEnd(Date flightTimeEnd) {
         this.flightTimeEnd = flightTimeEnd;
+    }
+
+    public Integer getFlightChairCount() {
+        return flightChairCount;
+    }
+
+    public void setFlightChairCount(Integer flightChairCount) {
+        this.flightChairCount = flightChairCount;
+    }
+
+    public Integer getFlightChairBusinessCount() {
+        return flightChairBusinessCount;
+    }
+
+    public void setFlightChairBusinessCount(Integer flightChairBusinessCount) {
+        this.flightChairBusinessCount = flightChairBusinessCount;
     }
 }
